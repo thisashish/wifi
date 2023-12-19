@@ -34,19 +34,20 @@ const WifiConnectorApp = () => {
   };
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20 }}>
+    <View style={{ backgroundColor:'green',
+    flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20 }}>
       <TextInput
         placeholder="Enter SSID"
         value={ssid}
         onChangeText={text => setSSID(text)}
-        style={{ borderWidth: 1, padding: 10, marginBottom: 10, width: 200 }}
+        style={{ backgroundColor:'white', borderWidth: 1, padding: 10, marginBottom: 10, width: 200 }}
       />
       <TextInput
         placeholder="Enter Password"
         value={password}
         onChangeText={text => setPassword(text)}
         secureTextEntry
-        style={{ borderWidth: 1, padding: 10, marginBottom: 10, width: 200 }}
+        style={{ backgroundColor:'white', borderWidth: 1, padding: 10, marginBottom: 10, width: 200 }}
       />
       <View style={{ marginBottom: 10, width: 120, overflow: 'hidden' }}>
         <Button title="Connect" onPress={handleConnect} />
@@ -63,5 +64,12 @@ const WifiConnectorApp = () => {
     </View>
   );
 };
+
+// const styles = StyleSheet.create({
+//   textBox:{
+//     backgroundColor:'green',
+//     flex: 1, justifyContent: 'center', alignItems: 'center', paddingHorizontal: 20
+//   }
+// })
 
 export default WifiConnectorApp;
